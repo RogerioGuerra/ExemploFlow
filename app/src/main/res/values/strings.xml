@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ExemploFlow</string>
+    <string name="getmusic">Get Music Flow</string>
+    <string name="get_music_livedata">Get Music LiveData</string>
+</resources>
