@@ -1,13 +1,11 @@
 package com.rgprogrammer.exemploflow
 
-
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-
 
 class MViewModel : ViewModel() {
     private val musicStyles = arrayListOf(
@@ -16,7 +14,7 @@ class MViewModel : ViewModel() {
         "Nirvana", "Deep Purple", "Dire Straits", "The Doors", "Alice in Chains"
     )
 
-   val musicstyls: LiveData<String> = getMusicStyles().asLiveData()
+    val musicstyls: LiveData<String> = getMusicStyles().asLiveData()
 
     fun getMusicStyles(): Flow<String> {
 
@@ -29,10 +27,7 @@ class MViewModel : ViewModel() {
             musicStyles.forEachIndexed { index, s ->
                 emit("${index + 1}. $s")
                 delay(500L)
-
             }
-
         }
-
     }
 }

@@ -9,5 +9,4 @@ class MViewHolder(private val binding: ItemMusicBinding) :
     fun bind(styleMusic: String) {
         binding.textMusic.text = styleMusic
     }
-
 }

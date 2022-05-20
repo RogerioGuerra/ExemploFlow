@@ -10,9 +10,7 @@ class MusicAdapter : RecyclerView.Adapter<MViewHolder>() {
     fun addMusic(music: String) {
         styles.add(music)
         notifyItemInserted(itemCount)
-
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MViewHolder {
         val binding = ItemMusicBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -26,5 +24,4 @@ class MusicAdapter : RecyclerView.Adapter<MViewHolder>() {
     override fun getItemCount(): Int {
         return styles.size
     }
-
 }

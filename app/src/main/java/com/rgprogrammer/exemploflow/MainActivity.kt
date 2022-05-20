@@ -1,8 +1,8 @@
 package com.rgprogrammer.exemploflow
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -27,23 +27,17 @@ class MainActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 viewModel.getMusicStyles().collect {
                     adapterMusic.addMusic(it)
-
                 }
-
             }
-
         }
         binding!!.btMusicLivedata.setOnClickListener {
 
             lifecycleScope.launch {
                 viewModel.musicstyls.observe(this@MainActivity) { music ->
                     adapterMusic.addMusic(music)
-
                 }
             }
-
         }
-
     }
 
     private fun setupRecyclerView() {
@@ -61,8 +55,6 @@ class MainActivity : AppCompatActivity() {
             setHasFixedSize(true)
             addItemDecoration(decorator)
             adapter = adapterMusic
-
         }
-
     }
 }
