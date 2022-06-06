@@ -25,7 +25,7 @@ class MViewModel : ViewModel() {
           }*/
 
             musicStyles.forEachIndexed { index, s ->
-                emit("${index + 1}. $s")
+                emit("${index + 1}. $s") // ${index + 1} para aparecer 1 no primeiro item da lista
                 delay(500L)
             }
         }
